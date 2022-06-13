@@ -1,0 +1,29 @@
+CREATE TABLE running_clothes (id INTEGER PRIMARY KEY, name TEXT, color TEXT, size INTEGER, price INTEGER, quantity INTEGER);
+
+INSERT INTO running_clothes VALUES (1, "running shorts", "black", 4, 40, 1);
+INSERT INTO running_clothes VALUES (2, "leggings", "pink", 4, 55, 1);
+INSERT INTO running_clothes VALUES (3, "sweatshirt", "black", 4, 60, 2);
+INSERT INTO running_clothes VALUES (4, "tanktops", "grey", 6, 25, 1);
+INSERT INTO running_clothes VAlUES (5, "tanktops", "white", 6, 25, 1);
+INSERT INTO running_clothes VALUES (6, "sports bra", "yellow", 4, 20, 2);
+INSERT INTO running_clothes VALUES (7, "crew socks", "black", 4, 15, 2);
+INSERT INTO running_clothes VALUES (8, "Hoka shoes", "white", 10, 100, 1);
+INSERT INTO running_clothes VALUES (9, "running watch", "white", "n/a", 150, 1);
+INSERT INTO running_clothes VALUES (10, "tshirt", "blue", 6, 30, 1);
+INSERT INTO running_clothes VALUES (11, "long shorts", "grey", 6, 35, 2);
+INSERT INTO running_clothes VALUES (12, "short socks", "grey", "small", 15, 2);
+INSERT INTO running_clothes VALUES (13, "biker shorts", "pink", 4, 30, 1);
+INSERT INTO running_clothes VALUES (14, "crop tank", "pink", 4, 30, 1);
+INSERT INTO running_clothes VALUES (15, "sweats", "black", 6, 40, 1);
+
+--display the database ordered by price
+SELECT * FROM running_clothes
+ORDER BY price desc;
+
+--What is the total cost of all clothes that were sold?
+SELECT SUM(price) from running_clothes 
+
+--How many items were black that were sold?
+SELECT name, color, quantity
+FROM running_clothes;
+
